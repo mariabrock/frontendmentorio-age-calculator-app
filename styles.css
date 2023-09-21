@@ -1,0 +1,113 @@
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    font-size: 32px;
+    background-color: var(--light-grey);
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    margin-top: 3rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding: .5rem;
+    border-radius: 20px;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: .5rem;
+}
+
+label {
+    font-size: 15px;
+    color: var(--smokey-grey);
+    letter-spacing: 5px;
+}
+
+input {
+    width: 100px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 10px;
+    border: 2px solid var(--light-grey);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+}
+
+.circle {
+    background-color: var(--purple);
+    height: 80px;
+    width: 80px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 4rem;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.age-output {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.result {
+    font-size: 60px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+    html, body {
+        width: auto!important;
+        overflow-x: hidden!important;
+        overflow-y: scroll;
+    }
+}
