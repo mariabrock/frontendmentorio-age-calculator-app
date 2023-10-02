@@ -6,6 +6,7 @@
     --off-black: hsl(0, 0%, 8%);
     --white: hsl(0, 0%, 100%);
     --off-white: hsl(0, 0%, 94%);
+    --error-red: #FF0000;
 }
 
 * {
@@ -49,6 +50,12 @@ html, body {
     padding-left: 1rem;
 }
 
+.error {
+    font-size: 10px;
+    color: var(--error-red);
+    padding-top: .25rem;
+}
+
 label {
     font-size: 15px;
     color: var(--smokey-grey);
@@ -73,7 +80,7 @@ input:focus {
     outline: 2px solid var(--purple);
 }
 
-.action {
+.form-group {
     display: flex;
     flex-direction: column;
 }
