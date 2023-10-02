@@ -2,7 +2,7 @@ const validateForm = (formSelector) => {
 	return new Promise((resolve, reject) => {
 
 		const formElement = document.querySelector(formSelector);
-		const currentTime = new Date();
+		let currentDate =  new Date().getFullYear();
 
 		const validationOptions = [
 			{
@@ -22,17 +22,12 @@ const validateForm = (formSelector) => {
 					`Must be a valid month.`
 			},
 			{
-				attribute: 'customYearlength',
+				attribute: 'customYearLength',
 				isValid: input =>
-					input.value <= currentTime &&
-					input.value <= 1900 &&
-					input.value.length >= parseInt(input.maxLength, 10),
+					input.value <= currentDate &&
+					input.value >= 1900,
 				errorMessage: (input, label) =>
 					`Must be a valid year.`
-				// 	input.value &&
-				// 	input.value.length >= parseInt(input.maxLength, 10),
-				// errorMessage: (input, label) =>
-				// 	`Must be a valid ${ label.textContent }.`
 			},
 			{
 				attribute: 'required',
@@ -76,6 +71,7 @@ const validateForm = (formSelector) => {
 		);
 
 		formElement.addEventListener('submit', (event) => {
+			event.preventDefault();
 			console.log('test');
 			const formValid = validateAllFormGroups(formElement);
 
@@ -102,4 +98,5 @@ const sendToAPI = formElement => {
 validateForm('#ageForm')
 	.then(formElement => {
 		console.log('Promise resolved');
+		sendToAPI(formElement);
 	})

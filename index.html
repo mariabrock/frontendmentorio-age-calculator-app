@@ -18,8 +18,6 @@
 
     <title>Frontend Mentor | Age calculator app</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
 </head>
     <body>
 
@@ -60,21 +58,22 @@
                            id="year"
                            placeholder="YYYY"
                            maxlength="4"
-                           customYearlength="4"
+                           customYearLength="4"
                            required>
                     <div class="error-container">
                         <div class="error"></div>
                     </div>
                 </div>
             </div>
-        </form>
+
 
         <div class="grid">
-            <button class="circle">
+            <button type="submit" class="circle">
                 <img src="./assets/images/icon-arrow.svg" alt="arrow pointing down">
             </button>
             <hr class="line">
         </div>
+    </form>
 
         <div class="age-output">
             <div class="result"><span class="purple" id="years">--</span>years</div>
