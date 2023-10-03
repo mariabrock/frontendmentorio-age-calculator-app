@@ -16,24 +16,21 @@ const validateForm = (formSelector) => {
 				isValid: input =>
 					input.value <= 31 &&
 					input.value.length >= parseInt(input.maxLength, 10),
-				errorMessage: (input, label) =>
-					`Must be a valid day.`
+				errorMessage: 'Must be a valid day.'
 			},
 			{
 				attribute: 'customMonthLength',
 				isValid: input =>
 					input.value <= 12 &&
 					input.value.length >= parseInt(input.maxLength, 10),
-				errorMessage: (input, label) =>
-					`Must be a valid month.`
+				errorMessage: 'Must be a valid month.'
 			},
 			{
 				attribute: 'customYearLength',
 				isValid: input =>
 					input.value <= currentYear &&
 					input.value >= 1900,
-				errorMessage: (input, label) =>
-					`Must be a valid year.`
+				errorMessage: 'Must be a valid year.'
 			},
 			{
 				attribute: 'required',
