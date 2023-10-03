@@ -2,7 +2,13 @@ const validateForm = (formSelector) => {
 	return new Promise((resolve, reject) => {
 
 		const formElement = document.querySelector(formSelector);
-		let currentDate =  new Date().getFullYear();
+		const currentYear =  new Date().getFullYear();
+		const currentMonth = new Date().getMonth();
+		const currentDay = new Date().getDay();
+		const userDay = document.querySelector('#day').value;
+		const userMonth = document.querySelector('#month').value;
+		const userYear = document.querySelector('#year').value;
+
 
 		const validationOptions = [
 			{
@@ -24,7 +30,7 @@ const validateForm = (formSelector) => {
 			{
 				attribute: 'customYearLength',
 				isValid: input =>
-					input.value <= currentDate &&
+					input.value <= currentYear &&
 					input.value >= 1900,
 				errorMessage: (input, label) =>
 					`Must be a valid year.`
@@ -82,6 +88,13 @@ const validateForm = (formSelector) => {
 				resolve(formElement);
 			}
 		});
+
+		console.log(currentYear, currentMonth, currentDay);
+
+		// calculateAge() {
+		// 	if()
+		// }
+
 	});
 };
 
