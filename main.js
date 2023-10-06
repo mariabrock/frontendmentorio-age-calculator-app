@@ -88,9 +88,32 @@ const validateForm = (formSelector) => {
 
 		console.log(currentYear, currentMonth, currentDay);
 
-		// calculateAge() {
-		// 	if()
+
+
+
+		// if (type === 'equal') {
+		// 	// Perform a calculation
+		// 	const firstNumber = calculator.dataset.firstNumber
+		// 	const operator = calculator.dataset.operator
+		// 	const secondNumber = displayValue
+		// 	display.textContent = calculate(firstNumber, operator, secondNumber)
 		// }
+		//
+		//
+		// calculate(firstNumber, operator, secondNumber) {
+		// 	firstNumber = parseInt(firstNumber)
+		// 	secondNumber = parseInt(secondNumber)
+		// 	if (operator === 'plus') return firstNumber + secondNumber
+		// 	if (operator === 'minus') return firstNumber - secondNumber
+		// 	if (operator === 'times') return firstNumber * secondNumber
+		// 	if (operator === 'divide') return firstNumber / secondNumber
+		// }
+
+		const calculateAge =() => {
+			if(userYear < currentYear) {
+				console.log(userYear - currentYear)
+			}
+		}
 
 	});
 };
